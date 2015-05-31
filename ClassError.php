@@ -2,7 +2,7 @@
 
 class ClassError {
 
-  private $errors = array();
+  protected $errors = array();
 
   /**
   * エラーをセットする
