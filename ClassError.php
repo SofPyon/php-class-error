@@ -32,6 +32,21 @@ class ClassError {
     }
 
   }
+  
+  /**
+  * エラーの数を返す
+  * @param  void
+  * @return int
+  */
+  public function countError() {
+    
+    if( $this->hasError() === TRUE ) {
+      return count( $this->errors );
+    }else{
+      return 0;
+    }
+    
+  }
 
   /**
   * エラーテキストとステータスを返す
