@@ -25,7 +25,7 @@ class ClassError {
   */
   public function hasError() {
 
-    if( is_array( $this->errors ) === TRUE && count( $this->errors ) > 0 ){
+    if( is_array( $this->errors ) === TRUE && count( $this->errors ) > 0 ) {
       return TRUE;
     }else{
       return FALSE;
@@ -35,17 +35,15 @@ class ClassError {
 
   /**
   * エラーテキストとステータスを返す
-  * @param  string       $type array:テキストとステータスの配列を返す
-  * @return string|array
+  * @param  void
+  * @return array|null
   */
-  public function getError( $type = array() ) {
+  public function getError() {
 
-    if( $type === "text" ){
-      return
-    }elseif{
-
-    }elseif(){
-
+    if( $this->hasError() === TRUE ) {
+      return $this->errors;
+    }else{
+      return NULL;
     }
 
   }
